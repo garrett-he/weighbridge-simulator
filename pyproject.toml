@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "weighbridge-simulator"
+version = "0.1.0"
+description = "A command line tool continuously send data to a serial port to simulate weighbridge communicating."
+authors = ["Garrett HE <garrett.he@hotmail.com>"]
+license = "BSD-3-Clause"
+readme = "README.md"
+homepage = "https://github.com/garrett-he/weighbridge-simulator"
+repository = "https://github.com/garrett-he/weighbridge-simulator.git"
+keywords = ["weighbridge", "simulator", "serial-communication"]
+packages = [{ include = "weighbridge_simulator", from = "src" }]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8,<3.13"
+click = "^8.1.7"
+
+[tool.poetry.group.dev.dependencies]
+chance = "^0.110"
+pre-commit = "^3.4.0"
+pyinstaller = "^5.13.2"
+pylint = "^2.17.6"
+pytest = "^7.4.2"
+pytest-cov = "^4.1.0"
+tox = "^4.11.3"
+
+[tool.poetry.scripts]
+wb-simulator = "weighbridge_simulator.__main__:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
