@@ -8,6 +8,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.2.0] - 2023-08-14
+
+### Added
+
+- Option to specify loops of sending data set.
+- Option to specify interval of sending data items.
+- Progress hint for sending data set.
+
+### Fixed
+
+- Issue of sending data set in loops.
+
 ## [0.1.0] - 2023-08-06
 
 ### Added
