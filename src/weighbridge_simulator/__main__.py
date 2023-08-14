@@ -17,10 +17,11 @@ def cli(port: str, data_file: TextIO, loops: int):
     ser = Serial(port)
     i = 0
 
+    lines = data_file.readlines()
     while loops == 0 or i < loops:
-        with click.progressbar(data_file.readlines(), label=f'[{i}/{loops}] Sending data set to port: {port}') as lines:
-            for line in lines:
-                ser.write(line.strip()[::-1].encode('ascii') + b'=')
+        with click.progressbar(lines, label=f'[{i}/{loops}] Sending data set to port: {port}') as items:
+            for item in items:
+                ser.write(item.strip()[::-1].encode('ascii') + b'=')
                 time.sleep(0.2)
 
         i += 1
