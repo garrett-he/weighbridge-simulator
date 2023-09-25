@@ -8,6 +8,12 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.3.0] - 2023-09-25
+
+### Added
+
+- Feature to create PTY internally.
+
 ## [0.2.0] - 2023-08-14
 
 ### Added
