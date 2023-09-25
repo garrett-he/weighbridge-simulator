@@ -1,5 +1,11 @@
 # weighbridge-simulator
 
+![license](https://img.shields.io/github/license/garrett-he/weighbridge-simulator)
+![status](https://img.shields.io/pypi/status/weighbridge-simulator)
+![build](https://img.shields.io/github/actions/workflow/status/garrett-he/weighbridge-simulator/ubuntu-jammy.yml)
+![version](https://img.shields.io/pypi/v/weighbridge-simulator)
+![python](https://img.shields.io/pypi/pyversions/weighbridge-simulator)
+
 A command line tool continuously send data to a serial port to simulate
 weighbridge communicating.
 
