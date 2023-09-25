@@ -10,7 +10,7 @@ repository = "https://github.com/garrett-he/weighbridge-simulator.git"
 keywords = ["weighbridge", "simulator", "serial-communication"]
 packages = [{ include = "weighbridge_simulator", from = "src" }]
 classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 3 - Alpha",
     "Environment :: Console",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: BSD License",
