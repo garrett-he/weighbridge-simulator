@@ -8,6 +8,12 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.3.1] - 2023-09-26
+
+### Fixed
+
+- Issue of showing version in PyInstaller.
+
 ## [0.3.0] - 2023-09-25
 
 ### Added
