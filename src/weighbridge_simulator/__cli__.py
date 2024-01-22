@@ -28,9 +28,10 @@ def main(port: str, data_file: TextIO, loops: int):
     i = 0
 
     while loops == 0 or i < loops:
-        for line in data_file.readlines():
-            ser.write(line.strip()[::-1].encode('ascii') + b'=')
-            time.sleep(0.2)
+        with click.progressbar(data_file.readlines(), label=f'[{i}/{loops}] Sending data set to port: {port}') as lines:
+            for line in lines:
+                ser.write(line.strip()[::-1].encode('ascii') + b'=')
+                time.sleep(0.2)
 
         i += 1
 
