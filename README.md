@@ -3,6 +3,17 @@
 A command line tool continuously send data to a serial port to simulate
 weighbridge communicating.
 
+## Install
+
+You can install this tool by the following methods:
+
+1. Install `weighbridge-simulator` by `pip`:
+   ```
+   pip install git+ssh://git@github.com/garrett-he/weighbridge-simulator.git
+   ```
+
+2. Download compiled binary files from [Repository Releases][1].
+
 ## Quickstart
 
 1. Start a pair of serial ports:
@@ -36,8 +47,32 @@ weighbridge communicating.
 
 Then you can receive the weight values from another port in **raw** data format.
 
+> `weighbridge-simulator` will convert the input data into **raw**
+> weighbridge format before sending it to a serial port, like:
+>
+> `012.345` will be converted to `543.210=`
+
+## Usage
+
+```
+Usage: wb-simulator [OPTIONS]
+
+  A command line tool continuously send data to a serial port to simulate
+  weighbridge communicating.
+
+Options:
+  -p, --port NAME       Name of serial port.  [required]
+  -d, --data-file PATH  Path of data file.  [required]
+  -l, --loops N         Loops of sending data set, zero means endless.
+  -i, --interval SECS   Interval of each data.
+  --version             Show the version and exit.
+  --help                Show this message and exit.
+```
+
 ## License
 
 Copyright (C) 2024 Garrett HE <garrett.he@outlook.com>
 
 The GNU General Public License (GPL) version 3, see [COPYING](./COPYING).
+
+[1]: https://github.com/garrett-he/weighbridge-simulator/releases
