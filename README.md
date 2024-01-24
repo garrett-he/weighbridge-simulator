@@ -16,13 +16,7 @@ You can install this tool by the following methods:
 
 ## Quickstart
 
-1. Start a pair of serial ports:
-
-   ```
-   socat -d -d pty,raw,echo=0 pty,raw,echo=0
-   ```
-
-2. Prepare a file contains weight list in format:
+1. Prepare a file contains weight list in format:
 
    ```
    000.000
@@ -39,13 +33,14 @@ You can install this tool by the following methods:
    ...
    ```
 
-3. Run `wb-simulator` to start simulation:
+2. Run `wb-simulator` to start simulation:
 
     ```
-    wb-simulator --data-file FILE --port /dev/pts/N
+    wb-simulator --data-file FILE
     ```
 
-Then you can receive the weight values from another port in **raw** data format.
+Then you can receive the weight values from the created port `/dev/pts/N` in *
+*raw** data format.
 
 > `weighbridge-simulator` will convert the input data into **raw**
 > weighbridge format before sending it to a serial port, like:
@@ -61,7 +56,7 @@ Usage: wb-simulator [OPTIONS]
   weighbridge communicating.
 
 Options:
-  -p, --port NAME       Name of serial port.  [required]
+  -p, --port NAME       Name of serial port.
   -d, --data-file PATH  Path of data file.  [required]
   -l, --loops N         Loops of sending data set, zero means endless.
   -i, --interval SECS   Interval of each data.
